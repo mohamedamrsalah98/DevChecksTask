@@ -1,0 +1,54 @@
+﻿/* styles.css */
+.employee-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.gender-radio input[type="radio"] {
+    margin-right: 10px;
+}
+
+.form-check-input {
+    margin-right: 10px;
+}
+
+
+
+    .employee-form h2 {
+        margin-bottom: 20px; 
+    }
+
+.btn-primary {
+    font-size: 18px; 
+    padding: 10px 20px; 
+}
+
+.x {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+h2 {
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+.btn-primary {
+    margin-top: 20px; 
+}
+
+.card {
+    max-width: 500px;
+    margin: 0 auto;
+}

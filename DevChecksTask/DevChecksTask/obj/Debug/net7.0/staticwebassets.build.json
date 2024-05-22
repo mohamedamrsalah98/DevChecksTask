@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "N9urXDlYQHCeE4d2Yt8AlOzdsJ0ExvP+W1EzCubN6I0=",
+  "Source": "DevChecksTask",
+  "BasePath": "_content/DevChecksTask",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

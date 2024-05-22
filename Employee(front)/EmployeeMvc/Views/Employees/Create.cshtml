@@ -1,0 +1,71 @@
+﻿@model EmployeeMvc.Models.Employee
+
+@{
+    ViewData["Title"] = "Add Employee";
+}
+
+<div class="card shadow p-4 rounded-5">
+    <h2 class="text-center mb-4">Add Employee</h2>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div id="successMessage" class="alert alert-success" role="alert">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    <form id="addEmployeeForm" asp-action="Create" method="post" class="employee-form">
+        <div class="form-group">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="JobRole" class="form-label"></label>
+            <select asp-for="JobRole" class="form-control">
+                <option value="">Select Job Role</option>
+                <option>Manager</option>
+                <option>Developer</option>
+                <option>Designer</option>
+            </select>
+            <span asp-validation-for="JobRole" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Gender" class="form-label"></label>
+            <div class="gender-radio">
+                <input asp-for="Gender" type="radio" value="Male" /> Male
+                <input asp-for="Gender" type="radio" value="Female" /> Female
+            </div>
+            <span asp-validation-for="Gender" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input asp-for="IsFirstAppointment" type="checkbox" class="form-check-input" />
+            <label asp-for="IsFirstAppointment" class="form-check-label"></label>
+        </div>
+        <div class="form-group">
+            <label asp-for="StartDate" class="form-label"></label>
+            <input asp-for="StartDate" type="date" class="form-control" />
+            <span asp-validation-for="StartDate" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Notes" class="form-label"></label>
+            <textarea asp-for="Notes" class="form-control"></textarea>
+        </div>
+        <button type="submit" class="btn btn-dark px-5 py-1 mt-5">Save</button>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var successMessage = document.getElementById("successMessage");
+            if (successMessage) {
+                document.getElementById("addEmployeeForm").reset();
+
+                setTimeout(function () {
+                    successMessage.style.display = "none";
+                }, 2500);
+            }
+        });
+    </script>
+}
